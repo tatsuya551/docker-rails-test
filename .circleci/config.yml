@@ -15,6 +15,8 @@ jobs:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_ROOT_PASSWORD: ''
           MYSQL_DATABASE: 'app_test'
+          host: 'db'
+
 
     working_directory: ~/docker-rails-test
 
