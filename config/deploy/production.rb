@@ -2,7 +2,7 @@ server '18.180.96.191',
   user: 'ec2-user', 
   roles: %w{app db web},
   ssh_options: {
-    keys: %w(~/.ssh/id_rsa_f1c1a1f43f58bd62269c778b55cc2e92), 
+    keys: ["#{ENV.fetch('PRODUCTION_SSH_KEY')}"], 
     forward_agent: true,
     auth_methods: %w(publickey),
     port: 22
