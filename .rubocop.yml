@@ -9,6 +9,8 @@ AllCops:
     - node_modules/**/*
     - db/migrate/*
     - vendor/**/*
+    - config/**/*
+
   # Rails向けのRails copsを実行。"rubocop -R"と同じ
   Rails:
     enabled: true
