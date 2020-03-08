@@ -1,4 +1,5 @@
 server '18.180.96.191', user: 'ec2-user', roles: %w{app db web}
+set :ssh_options, keys: '~/.ssh/id_rsa' 
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
