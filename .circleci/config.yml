@@ -9,8 +9,7 @@ jobs:
           MYSQL_USERNAME: 'root'
           MYSQL_PASSWORD: ''
           MYSQL_PORT: 3306
-          BUNDLER_VERSION: 2.1.2
-      - image: circleci/mysql:5.7
+      - image: circleci/mysql:5.6
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_ROOT_PASSWORD: 'password'
@@ -29,8 +28,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            gem install bundler:1.16.6
-            bundle _1.16.6_ install --jobs=4 --retry=3 --path vendor/bundle
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
 
       - save_cache:
           paths:
