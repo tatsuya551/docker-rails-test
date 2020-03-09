@@ -1,11 +1,11 @@
-.h1
+.home-top
   自動デプロイ成功!プルリク
-
-= link_to new_user_registration_path do
-  新規登録へ
-
-= link_to destroy_user_session_path, method: :delete do
-  ログアウト
-
+.home-link
+  = link_to new_user_registration_path do
+    新規登録へ
+.home-link
+  = link_to destroy_user_session_path, method: :delete do
+    ログアウト
 -if user_signed_in?
-  ログイン中...
+  .home-title
+    ログイン中...
